@@ -89,12 +89,12 @@ mod = None
 
 #params
 f_params_file = tempfile.NamedTemporaryFile(delete=True)
-urlretrieve("https://s3.amazonaws.com/smallya-test/geo/RN101-5k500-0012.params", f_params_file.name)
+urlretrieve("https://s3.amazonaws.com/mxnet12345/geo/RN101-5k500-0012.params", f_params_file.name)
 f_params_file.flush()
 
 #symbol
 f_symbol_file = tempfile.NamedTemporaryFile(delete=True)
-urlretrieve("https://s3.amazonaws.com/smallya-test/geo/RN101-5k500-symbol.json", f_symbol_file.name)
+urlretrieve("https://s3.amazonaws.com/mxnet12345/geo/RN101-5k500-symbol.json", f_symbol_file.name)
 f_symbol_file.flush()
 
 sym, arg_params, aux_params = load_model(f_symbol_file.name, f_params_file.name)
